@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: Springbootjpayaml
+
+
+    datasource:
+        url: jdbc:h2:mem:jithendar
+        driverClassName: org.h2.Driver
+        username: sa
+        password: jithu@123
+
+    h2:
+        console:
+            enabled: true
+
+    jpa:
+        show-sql: true
+
+server: 
+    port: 8751

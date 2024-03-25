@@ -1,0 +1,37 @@
+package com.Sathya.ORM.Person.Mapper;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.Sathya.ORM.Person.Entity.Person;
+import com.Sathya.ORM.Person.Model.PersonDetails;
+import com.Sathya.ORM.Person.Repository.PersonRepository;
+
+@Component
+public class PersonClient  implements CommandLineRunner{
+	
+	@Autowired
+	PersonRepository personRepository;
+	
+	@Autowired
+	PersonMapper mapper;
+	
+	@Override
+	public void run(String... args) throws Exception {
+		
+		//model class data : having the values
+     PersonDetails personDetails = new PersonDetails();
+     
+     personDetails.setPersonid(101);
+     personDetails.setFirstname("jithendar");
+     personDetails.setLastname("gouni");
+     personDetails.setEmail("jithu@gmail.com");
+     personDetails.setAge(23);
+     
+		//conversion of model class data to entity
+     Person perDetails = mapper.modelToEntityConversion(personDetails);
+     
+	}
+
+}

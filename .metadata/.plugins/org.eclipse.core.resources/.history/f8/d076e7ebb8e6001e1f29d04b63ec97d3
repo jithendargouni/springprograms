@@ -1,0 +1,5 @@
+package com.sathya.orm.mapper;
+
+public class ProductMapper {
+
+}

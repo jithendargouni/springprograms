@@ -1,0 +1,13 @@
+package com.sathya.orm.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Product {
+	@Id
+	private int proid;
+	private String proname;
+	private double proprice;
+
+}

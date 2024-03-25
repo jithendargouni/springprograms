@@ -1,0 +1,5 @@
+package com.sathya.orm.jpql.Repository;
+
+public interface BookRepository {
+
+}

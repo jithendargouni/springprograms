@@ -1,0 +1,28 @@
+package com.sathya.orm.mapper;
+
+import java.time.LocalDateTime;
+
+import org.springframework.stereotype.Component;
+
+import com.sathya.orm.entity.Product;
+import com.sathya.orm.model.ProductDetails;
+
+@Component
+public class ProductMapper {
+	
+	//this method taking model class as a input and entity class as output
+	public Product modelToEntityConvertion(ProductDetails productDetails)
+	{
+		//read the data from model class set to entity class
+		
+		Product product = new Product();
+		product.setProid(productDetails.getProid());
+		product.setProname(productDetails.getProname());
+		product.setProprice(productDetails.getProprice());
+		product.setCreateAt(LocalDateTime.now());
+		product.setCreateBy(System.getProperty("user.name"));
+		
+		return product;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.Sathya.ORM.Person.Entity;
+
+public class Person {
+
+}

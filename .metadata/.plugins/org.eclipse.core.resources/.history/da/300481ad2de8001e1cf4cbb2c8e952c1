@@ -1,0 +1,5 @@
+package com.Sathya.ORM.Person.Model;
+
+public class PersonDetails {
+
+}
